@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Scott Heggen       TODO: Change this to your names
-# Username: heggens               TODO: Change this to your usernames
+# Author: Abraham Moreno, Concepta Njolima       TODO: Change this to your names
+# Username: ConceptaNjolima, TheOneAndOnlyAbe               TODO: Change this to your usernames
 #
 # Assignment: T01: Choose Your Own Adventure
 #
