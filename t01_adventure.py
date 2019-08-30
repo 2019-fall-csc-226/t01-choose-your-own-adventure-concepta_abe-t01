@@ -71,25 +71,43 @@ if dead == True:
 sleep(delay)
 print()
 print("You are being chased by a group of goblins. You and your friend for some reason decide to run to a cliff. What do you do?")
-action = input("[Sleep | Jump | Do Nothing | Fight] ")
-action = action.lower()
-if action == "sleep":
-    # Good choice
-    sleep(delay)
-    print("Amazing! Good job, ", username, "! You have found their weakness! Goblins can't see sleeping people...")
-    sleep(delay)
-    print("As you awake, you notice some golden coins one of the goblins left behind.")
-    sleep(delay)
-elif action == "do nothing":
-    # Bad choice
-    print("Do nothing? ")
-    dead = True
-    sleep(delay)
+def input_action():
+    action = input("[Sleep | Jump | Do Nothing | Fight] ")
+    return action
 
-if dead == True:
-    print("Oh no! You died. Better luck next time! Try again by hitting the green play button. ")
-    quit()
+def ask_action(my_input):
+    while 2==2:
+        my_input = my_input.lower()
+        if (my_input =="sleep") or (my_input == "jump") or (my_input =="do nothing") or (my_input =="fight"):
+            break
+        print("This is out of the choice Sleep,Jump,Do nothing or fight.Make another choice!")
+        my_input = input_action()
+    if my_input == "sleep":
+        # Good choice
+        sleep(delay)
+        print("Amazing! Good job, ", username, "! You have found their weakness! Goblins can't see sleeping people...")
+        sleep(delay)
+        print("As you awake, you notice some golden coins one of the goblins meleft behind.")
+        sleep(delay)
+    elif my_input == "do nothing":
+        # Bad choice
+        print("Do nothing? YOU DIE!!!!")
+        dead = True
+        sleep(delay)
+        if dead == True:
+            print("Oh no! You died. Better luck next time! Try again by hitting the green play button. ")
+            quit()
+    elif my_input=="fight":
+        print("You have proved so brave. Go on with your journey!")
+    elif my_input== "jump":
+       print("At the bottom of this cliff lies waves of fast flowing water. Jumping was not a good choice!")
 
+
+
+def main():
+    ask_action(input_action())
+
+main()
 # TODO Don't forget to check if your user is dead at the end of your chapter!
 
 
