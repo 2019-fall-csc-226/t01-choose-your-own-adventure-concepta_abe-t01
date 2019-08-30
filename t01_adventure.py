@@ -1,6 +1,6 @@
 ######################################################################
 # Author: Abraham Moreno, Concepta Njolima       TODO: Change this to your names
-# Username: ConceptaNjolima, TheOneAndOnlyAbe               TODO: Change this to your usernames
+# Username: TheOneAndOnlyAbe, ConceptaNjolima          TODO: Change this to your usernames
 #
 # Assignment: T01: Choose Your Own Adventure
 #
@@ -68,7 +68,27 @@ if dead == True:
 #########################################################################################################
 # TODO Add your part of the story here. Keep in mind you may NOT be coming right after the example above.
 
+sleep(delay)
+print()
+print("You are being chased by a group of goblins. You and your friend for some reason decide to run to a cliff. What do you do?")
+action = input("[Sleep | Jump | Do Nothing | Fight] ")
+action = action.lower()
+if action == "sleep":
+    # Good choice
+    sleep(delay)
+    print("Amazing! Good job, ", username, "! You have found their weakness! Goblins can't see sleeping people...")
+    sleep(delay)
+    print("As you awake, you notice some golden coins one of the goblins left behind.")
+    sleep(delay)
+elif action == "do nothing":
+    # Bad choice
+    print("Do nothing? ")
+    dead = True
+    sleep(delay)
 
+if dead == True:
+    print("Oh no! You died. Better luck next time! Try again by hitting the green play button. ")
+    quit()
 
 # TODO Don't forget to check if your user is dead at the end of your chapter!
 
