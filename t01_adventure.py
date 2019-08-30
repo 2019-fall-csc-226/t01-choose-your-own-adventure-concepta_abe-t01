@@ -11,7 +11,7 @@
 ######################################################################
 # Acknowledgements:
 #   Original Author: Dr. Scott Heggen
-#
+#   Supported by Azis
 #   Inspired by https://www.cs.hmc.edu/twiki/bin/view/CS5/Week0ChoiceProblem
 ######################################################################
 from time import sleep
@@ -76,12 +76,13 @@ def input_action():
     return action
 
 def ask_action(my_input):
-    while 2==2:
-        my_input = my_input.lower()
-        if (my_input =="sleep") or (my_input == "jump") or (my_input =="do nothing") or (my_input =="fight"):
-            break
-        print("This is out of the choice Sleep,Jump,Do nothing or fight.Make another choice!")
-        my_input = input_action()
+    #Another option of prompting the user to re-enter option incase they had an input that is not Jump, sleep. fight or do nothing
+    # while 2==2:
+    #     my_input = my_input.lower()
+    #     if (my_input =="sleep") or (my_input == "jump") or (my_input =="do nothing") or (my_input =="fight"):
+    #         break
+    #     print("This is out of the choice Sleep,Jump,Do nothing or fight.Make another choice!")
+    #     my_input = input_action()
     if my_input == "sleep":
         # Good choice
         sleep(delay)
@@ -101,6 +102,9 @@ def ask_action(my_input):
         print("You have proved so brave. Go on with your journey!")
     elif my_input== "jump":
        print("At the bottom of this cliff lies waves of fast flowing water. Jumping was not a good choice!")
+    else:
+        print("The choice you entered is not available. Renter ")
+        main()
 
 
 
